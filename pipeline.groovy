@@ -1,9 +1,19 @@
 node('master') {
   def test = test
   
-  stage('Checkout') {
-        checkout scm
-            git branch: 'master', url: "https://github.com/Nimble85/Selenium_k8s.git"
+  stage('Directory') {
+    dir('test'){
+            deleteDir()
+            dir('test'){
+                dir('test'){
+                    dir('76'){
+                        dir('767'){
+                            sh 'ls -1 | wc -l; touch 675.sh'
+                        }
+                    }
+                }
+            }
+    }
 
          
       }
